@@ -1,14 +1,19 @@
 <div class="row mt-3 mb-3">
     <div class="col">
-        <input type="number" name="num1" class="form-control mb-3" [(ngModel)]="num1" placeholder="Quantidade da moeda">
-    </div>
-    <div class="col">
-        <input type="mumber" name="num2" class="form-control mb-3" [(ngModel)]="num2" placeholder="Valor de converção">
+        <div class="form-floating">
+            <input type="number" name="num1" class="form-control mb-3" [(ngModel)]="num1">
+            <label for="floatingInputValue">Quantidade da moeda</label>
+        </div>
     </div>
     <div class="col">
         <div class="form-floating">
-            <select name="moeda" class="form-select">
-                <option selected>Selecione</option>
+            <input type="mumber" name="num2" class="form-control mb-3" [(ngModel)]="num2">
+            <label for="floatingInputValue">Valor de converção</label>
+        </div>
+    </div>
+    <div class="col">
+        <div class="form-floating">
+            <select name="moeda" class="form-select" [(ngModel)]="moeda">
                 <option value="1">Dólar Americano (USD) para Euro (EUR)</option>
                 <option value="2">Dólar Americano (USD) para Real Brasileiro (BRL)</option>
                 <option value="3">Euro (EUR) para Dólar Americano (USD)</option>
@@ -22,11 +27,11 @@
 </div>
 <div class="row mb-3">
     <div class="col-3  mx-auto">
-        <button type="submit" class="btn btn-outline-dark btn-lg" name="Converter" (click)="converter()">Converter</button>
+        <button type="submit" class="btn btn-outline-dark btn-lg" name="converter" (click)="converter()">Converter</button>
     </div>
 </div>
 <div class="row mb-5">
     <div class="col-6 mx-auto">
-        <input type="number" name="resp" class="form-control mb-3" [value]="resp" readonly>
+        <textarea name="resp" class="form-control" id="resp" cols="30" rows="2" [value]="resp" readonly></textarea>
     </div>
 </div>

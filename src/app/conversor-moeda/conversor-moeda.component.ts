@@ -8,40 +8,37 @@ import { Component } from '@angular/core';
 export class ConversorMoedaComponent {
   num1: number = 0;
   num2: number = 0;
-  moeda: number = 0;
+  moeda :string = "0";
   resp: number = 0;
 
   converter(){
-    this.resp = this.num1 + this.num2;
-/*
     switch (this.moeda) {
-      case 1:
-        this.resp = 1;
+      case "1":
+        this.resp = this.num1 * this.num2; // Conversão de dólar para euro
         break;
 
-      case 2:
-        this.resp = 2;
+      case "2":
+        this.resp = this.num1 * this.num2; // Conversão de dólar para real
         break;
 
-      case 3:
-        this.resp = 3;
+      case "3":
+        this.resp = this.num1 * this.num2; // Conversão de euro para dólar
         break;
 
-      case 4:
-        this.resp = 4;
+      case "4":
+        this.resp = this.num1 * this.num2; // Conversão de euro para real
         break;
 
-      case 5:
-        this.resp = 5;
+      case "5":
+        this.resp =  this.num1 * this.num2; //Conversão de real para dólar
         break;
 
-      case 6:
-        this.resp = 6;
+      case "6":
+        this.resp =  this.num1 * this.num2; // Conversão de real para euro
         break;
     
       default:
         break;
     }
-    */
   }
 }
