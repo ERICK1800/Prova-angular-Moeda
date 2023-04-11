@@ -1,24 +1,20 @@
 <div class="row mt-3 mb-3">
     <div class="col">
-        <input type="number" name="num1" class="form-control mb-3" placeholder="Valor da moeda 1">
-        <div class="form-floating">
-            <select name="moeda1" class="form-select">
-                <option selected>Selecione</option>
-                <option value="USD">Dólar Americano (USD)</option>
-                <option value="EUR">Euro (EUR)</option>
-                <option value="BRL">Real Brasileiro (BRL)</option>
-            </select>
-            <label for="floatingSelect">Selecione o tipo de moeda</label>
-        </div>
+        <input type="number" name="num1" class="form-control mb-3" [(ngModel)]="num1" placeholder="Quantidade da moeda">
     </div>
     <div class="col">
-        <input type="mumber" name="num2" class="form-control mb-3" placeholder="Valor da moeda 2">
+        <input type="mumber" name="num2" class="form-control mb-3" [(ngModel)]="num2" placeholder="Valor de converção">
+    </div>
+    <div class="col">
         <div class="form-floating">
-            <select name="moeda2" class="form-select">
+            <select name="moeda" class="form-select">
                 <option selected>Selecione</option>
-                <option value="USD">Dólar Americano (USD)</option>
-                <option value="EUR">Euro (EUR)</option>
-                <option value="BRL">Real Brasileiro (BRL)</option>
+                <option value="1">Dólar Americano (USD) para Euro (EUR)</option>
+                <option value="2">Dólar Americano (USD) para Real Brasileiro (BRL)</option>
+                <option value="3">Euro (EUR) para Dólar Americano (USD)</option>
+                <option value="4">Euro (EUR) para Real Brasileiro (BRL)</option>
+                <option value="5">Real Brasileiro (BRL) para Dólar Americano (USD)</option>
+                <option value="6">Real Brasileiro (BRL) para Euro (EUR)</option>
             </select>
             <label for="floatingSelect">Selecione o tipo de moeda</label>
         </div>
@@ -31,6 +27,6 @@
 </div>
 <div class="row mb-5">
     <div class="col-6 mx-auto">
-        <input type="number" name="resp" class="form-control mb-3" placeholder="Resultado" readonly>
+        <input type="number" name="resp" class="form-control mb-3" [value]="resp" readonly>
     </div>
 </div>

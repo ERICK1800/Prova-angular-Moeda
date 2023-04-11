@@ -6,30 +6,42 @@ import { Component } from '@angular/core';
   styleUrls: ['./conversor-moeda.component.css']
 })
 export class ConversorMoedaComponent {
-  num1: number;
-  moeda1: string;
-  num2: number;
-  moeda2: string;
-  resp: number;
+  num1: number = 0;
+  num2: number = 0;
+  moeda: number = 0;
+  resp: number = 0;
 
   converter(){
+    this.resp = this.num1 + this.num2;
+/*
+    switch (this.moeda) {
+      case 1:
+        this.resp = 1;
+        break;
 
-    switch (key) {
-      case value:
-        
+      case 2:
+        this.resp = 2;
+        break;
+
+      case 3:
+        this.resp = 3;
+        break;
+
+      case 4:
+        this.resp = 4;
+        break;
+
+      case 5:
+        this.resp = 5;
+        break;
+
+      case 6:
+        this.resp = 6;
         break;
     
       default:
         break;
     }
-
-    if (this.moeda1 == "USD" && this.moeda2 == "EUR") {
-      
-    }
-    this.moeda1;
-    this.moeda2;
-    this.num1;
-    this.num2;
-    this.resp;
+    */
   }
 }
